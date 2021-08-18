@@ -19,10 +19,10 @@
 
 ## Actividades
 
-[x] Crear index.js
-[x] Iniciar npm (npm init)
-[x] Instalar nodemon
-[x] Crear servidor en puerto 3000
+- [x] Crear index.js
+- [x] Iniciar npm (npm init)
+- [x] Instalar nodemon
+- [x] Crear servidor en puerto 3000
 
 ## Machetes
 
@@ -34,5 +34,5 @@ nvm uninstall xx.x.x => borrar la version elegida
 
 ### Como funciona node.js
 
-![event loop](eventloop.jpg)
+![event loop](src/eventloop.jpg)
 single thread quiere decir q todos los comandos se hacen en una sola secuencia... **un solo** hilo, un proceso termina y empieza otro
