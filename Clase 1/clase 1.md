@@ -17,12 +17,16 @@
 - [React.js](https://es.reactjs.org/)
 - [MYSQL](https://www.mysql.com/)
 
+---
+
 ## Actividades
 
 - [x] Crear index.js
 - [x] Iniciar npm (npm init)
 - [x] Instalar nodemon
 - [x] Crear servidor en puerto 3000
+
+---
 
 ## Machetes
 
@@ -34,8 +38,10 @@
 
 ### Como funciona node.js
 
-![event loop](src/eventloop.jpg)
+![event loop](src/eventloop_nodejs.png)
 single thread quiere decir q todos los comandos se hacen en una sola secuencia... **un solo** hilo, un proceso termina y empieza otro
+
+---
 
 ## Material extra
 
