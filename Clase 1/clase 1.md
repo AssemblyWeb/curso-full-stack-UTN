@@ -40,6 +40,7 @@
 
 ![event loop](src/eventloop_nodejs.png)
 single thread quiere decir q todos los comandos se hacen en una sola secuencia... **un solo** hilo, un proceso termina y empieza otro
+![event loop](src/viejoservidorVSnodejs.png)
 
 ---
 
@@ -48,3 +49,10 @@ single thread quiere decir q todos los comandos se hacen en una sola secuencia..
 - [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - [The Node.js Event Loop: Not So Single Threaded](https://www.youtube.com/watch?v=zphcsoSJMvM)
 - [Morning Keynote- Everything You Need to Know About Node.js Event Loop - Bert Belder, IBM](https://www.youtube.com/watch?v=PNa9OMajw9w)
+- [La Guía Definitiva del Event Loop en JS (async, promises, callbacks, render)](https://www.youtube.com/watch?v=dX2lThXc0p4)
+
+---
+
+## Lección
+
+[clase 1](https://centrodeelearning.zoom.us/rec/play/Bsxg9NbdW6Qw7u4pGJlC4ENYNSFTpDUu3IHcBYWm0iS-nX550QiO1WfxlCnLqV0icWmLFQNJUpbogqNJ.3tvMbUnnUoTLlQc-?startTime=1629309770000&_x_zm_rtaid=QdopSA_bQRqs8TyHl9EqWQ.1629731897181.c4109ab404d5d2804bc98fda2afbbfb9&_x_zm_rhtaid=150)
