@@ -6,15 +6,15 @@
 // Se mostrará por consola cuando el servidor esté listo para operar y en que puerto lo está haciendo. Pasen su Servidor por el chat.
 
 const http = require( 'http' )
-const port = 8080
+const PORT = 8080
 
 const server = http.createServer( ( request, response ) => {
     
-    response.end( `Mi servidor está en el puerto ${port}` )
+    response.end( `Mi servidor está en el puerto ${PORT}` )
     
 })
 
-server.listen( port, () =>  { 
+server.listen( PORT, () =>  { 
     
     getGreeting()
     

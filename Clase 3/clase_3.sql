@@ -70,12 +70,16 @@ SELECT * FROM empleados WHERE nombre LIKE "%l";
 -- Francisco Perez, Programador, 26 años, salario 900, mail:
 -- francisco@bignet.com
 INSERT INTO empleados VALUE (null, "Francisco", "Perez", "Programador", 26, 900, "francisco@bignet.com");
+
 -- 13)Borrar los datos de Hernar Rosso
 DELETE FROM empleados WHERE nombre = "Hernan" AND apellido = "Rosso";
--- Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
-SELECT id_emp FROM empleados WHERE nombre = "Hernan" AND apellido = "Rosso"; > @id_deleteUser;
+-- Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  
+-- To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+
+SELECT id_emp FROM empleados WHERE nombre = "Hernan" AND apellido = "Rosso" > @id_deleteUser;
 DELETE FROM empleados WHERE id_emp = @id_deleteUser;
 DELETE FROM empleados WHERE id_emp = 10;
+
 -- 14)Modificar los datos de Daniel Gutierrez, salario 900.
 UPDATE empleados SET salario = 900 WHERE nombre = "Daniel" AND apellido = "Gutierrez";
 SELECT id_emp FROM empleados WHERE nombre = "Daniel" AND apellido = "Gutierrez" > @id_updateUser;
@@ -83,3 +87,43 @@ UPDATE empleados SET salario = 900 WHERE id_emp = @id_updateUser;
 
 SELECT * FROM empleados WHERE nombre = "Daniel" AND apellido = "Gutierrez";
 SELECT * FROM empleados;
+
+-- TEST
+SELECT * FROM empleados;
+
+DELETE FROM empleados WHERE nombre="Francisco" AND apellido="Perez";
+
+ALTER TABLE empleados ADD COLUMN telefono INT NOT NULL AFTER mail; 
+ALTER TABLE empleados DROP COLUMN telefono; 
+
+ALTER TABLE empleados ADD COLUMN password VARCHAR(4) NOT NULL AFTER mail;
+
+INSERT INTO empleados 
+	('password')
+VALUES
+	('HOLA'),
+    ('chau'),
+    ('hello'),
+    ('pwd'),
+    ('qwerty');
+    
+UPDATE empleados 
+SET password = 'hola' WHERE id_emp = "4" AND
+SET password = 'pasw' WHERE id_emp = "5";
+SET password = 'pwd' WHERE id_emp = "4",
+SET password = 'qwert' WHERE id_emp = "6",
+SET password = '1234' WHERE id_emp = "7",
+SET password = 'safe' WHERE id_emp = "8",
+SET password = 'tostado' WHERE id_emp = "9",
+SET password = 'cafe' WHERE id_emp = "10",
+SET password = 'hello' WHERE id_emp = "11",
+SET password = 'horrible' WHERE id_emp = "12";
+
+
+SELECT telefono from empleados WHERE id_emp="1";
+
+-- JOIN TWO DATABASES TABLES
+SELECT *
+FROM phpmysql_crud.task php
+JOIN empleados em
+   ON php.id = em.id_emp

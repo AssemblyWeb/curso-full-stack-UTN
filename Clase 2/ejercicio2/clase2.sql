@@ -5,11 +5,14 @@ CREATE DATABASE web;
 USE web;
 
 -- CREAMOS LA TABLA CON LOS CAMPOS --
-CREATE estudiante TABLE estudiante(
-id INT NOT NULL PRIMARY KEY,
-nombre VARCHAR(30) NOT NULL,
-apellido VARCHAR(30) NOT NULL
+CREATE TABLE estudiante
+(
+    id INT NOT NULL PRIMARY KEY,
+    nombre VARCHAR(30) NOT NULL,
+    apellido VARCHAR(30) NOT NULL
 );
 
 -- CARGAR DATOS EN LA TABLA DE ESTUDIANTES -- 
-INSERT INTO estudiante VALUES (1, "Victoria", "Lopez");
+INSERT INTO estudiante
+VALUES
+    (1, "Victoria", "Lopez");
