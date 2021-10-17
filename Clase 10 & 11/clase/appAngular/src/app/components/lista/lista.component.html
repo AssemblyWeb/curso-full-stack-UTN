@@ -1,0 +1,19 @@
+<h2>Heroes presentes</h2>
+<table>
+    <tbody>
+        <tr *ngFor="let hero of heroes; let i = index" >
+            <td>{{ i + 1 }} {{heroes[i]}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="borrarHeroe()" >Borrar ultimo heroe</button>
+
+<h2>Heroes Borrados</h2>
+<div *ngIf=" heroeBorrado !== '' ">
+    <ul>
+        <td>
+            {{heroeBorrado}}
+        </td>
+    </ul>
+</div>

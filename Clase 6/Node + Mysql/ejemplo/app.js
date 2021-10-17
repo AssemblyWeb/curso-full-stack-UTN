@@ -1,0 +1,68 @@
+const mysql = require('mysql2');
+const http = require('http');
+
+const mysqlConfig = require('./config/config');
+console.log(mysqlConfig);
+
+const connection = mysql.createConnection(mysqlConfig);
+
+connection.connect((error) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  console.log('conectado master')
+});
+
+connection.query('SELECT * FROM alumno', (err, results) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  results.map(r => console.log(r));
+});
+
+
+const servidor = http.createServer((request, response) => {
+  console.log('primero');
+  connection.query('SELECT * FROM alumno', (err, results) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    let listaResultados = '';
+    results.forEach(r => {
+      listaResultados += `<div>${r.Alu_nombre}</div>`;
+    });
+
+    const peticionURL = request.url;
+
+    
+    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.write(`
+      <html> 
+        <head> 
+          <meta charset="utf-8">
+          <title>Mi primera pagina con node </title>
+        </head>
+        <body> 
+          ${(peticionURL === '/contacto') ? 'Pagina de contacto' : 'Esta es la home'}
+          ${listaResultados}
+          <h1> Nuestra url es: ${peticionURL}</h1>
+        </body>
+      </html>`
+    );
+    response.end();
+  });
+});
+
+console.log('segundo');
+
+servidor.listen(4000);
+console.log('Servidor web iniciado');
+
+
+
+

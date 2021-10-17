@@ -31,6 +31,14 @@ empleados
 MODIFY COLUMN 
 EDAD VARCHAR(100);
 
+-- ALT
+ALTER TABLE
+empleados
+MODIFY COLUMN
+NOMBRE VARCHAR(100),
+MODIFY COLUMN
+APELLIDO VARCHAR(100);
+
 -- Crear una columna de DNI que sea numerico
 ALTER TABLE
 empleados
