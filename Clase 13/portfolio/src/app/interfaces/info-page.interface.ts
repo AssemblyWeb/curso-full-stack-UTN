@@ -5,5 +5,6 @@ export class InfoPage{
     twitter?: string;
     instagram?: string;
     tumblr?: string;
+    pinterest?: string;
     pagina?: string;
 }
