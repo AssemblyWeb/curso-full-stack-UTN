@@ -37,6 +37,11 @@
 - ng g c heroes/lista => crea componente con el nombre especificado
 - si en el routeo los routerLink no funcionan, agregar / ( routerLink="about" => routerLink="/about")
 
+### Build
+
+- https://www.npmjs.com/package/http-server => server for build
+- http-serve -o => en la carpeta generada del build
+
 ---
 
 ## Lección
