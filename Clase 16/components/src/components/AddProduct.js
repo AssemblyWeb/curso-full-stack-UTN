@@ -11,8 +11,9 @@ function AddProduct( { setProducts } ) {
     
     const handleSubmitValue = event => {
         event.preventDefault()
-        if(input.trim().length >= 1){
-            setProducts(products => [...products, input])
+        if( input.trim().length >= 1 ) {
+            // setProducts( products => [ input, ...products ] )
+            setProducts( input )
             setInput("")
         }
     }
